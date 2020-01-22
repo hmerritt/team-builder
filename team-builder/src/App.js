@@ -18,7 +18,7 @@ function App()
         <div className="App">
             <header>
                 <div className="container">
-                    <h1>Team Members</h1>
+                    <h1>Team Members ({teamMembers.length})</h1>
                 </div>
             </header>
 

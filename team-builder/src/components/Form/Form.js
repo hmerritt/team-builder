@@ -5,17 +5,25 @@ function Form({ teamMembers, setTeamMembers })
 {
 
     //  Form input state -> individual member
-    const [member, setMember] = useState({});
+    const [member, setMember] = useState({
+        name: '',
+        email: '',
+        roll: 'Frontend Developer'
+    });
 
     //  Handle form input changes
     const handleChanges = e =>
     {
-        setMember({ ...member, [e.target.id]: [e.target.value] });
+        setMember({ ...member, [e.target.id]: e.target.value });
     }
 
+    //  Add a new member
     const addMember = e =>
     {
+        //  Prevent page reloading
         e.preventDefault();
+
+        //  Add new member to teamMembers list
         setTeamMembers([...teamMembers, member]);
     }
 
@@ -30,6 +38,7 @@ function Form({ teamMembers, setTeamMembers })
                         id='name'
                         placeholder='Name'
                         onChange={handleChanges}
+                        required
                     />
                 </label>
                 <label htmlFor='email'>
@@ -40,6 +49,7 @@ function Form({ teamMembers, setTeamMembers })
                         id='email'
                         placeholder='Email'
                         onChange={handleChanges}
+                        required
                     />
                 </label>
                 <label htmlFor='roll'>
@@ -50,7 +60,6 @@ function Form({ teamMembers, setTeamMembers })
                         id='roll'
                         onChange={handleChanges}
                     >
-                        <option value='' disabled selected>Roll</option>
                         <option value='Frontend Developer'>Frontend Developer</option>
                         <option value='Backend Developer'>Backend Developer</option>
                         <option value='Designer'>Designer</option>
