@@ -11,3 +11,12 @@ form label {
 form label h4 {
   margin: 0;
 }
+form input,
+form select {
+  width: 200px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 25px;
+}

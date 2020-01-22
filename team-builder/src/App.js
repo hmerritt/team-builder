@@ -11,7 +11,7 @@ function App()
     const [teamMembers, setTeamMembers] = useState([{
         name: 'John Doe',
         email: 'john@doe.com',
-        roll: 'intern'
+        roll: 'Frontend Developer'
     }]);
 
     return (
@@ -27,7 +27,7 @@ function App()
                 <Members teamMembers={teamMembers} />
 
                 {/* Form */}
-                <Form setTeamMembers={setTeamMembers} />
+                <Form teamMembers={teamMembers} setTeamMembers={setTeamMembers} />
             </div>
         </div>
     );
