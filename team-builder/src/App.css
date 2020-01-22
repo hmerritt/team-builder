@@ -26,19 +26,5 @@
 /*  Content  */
 
 header {
-  margin-bottom: 40px; 
-}
-
-
-table {
-  text-align: justify;
-}
-
-table th,
-table td {
-  width: 100px;
-  padding: 0 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 40px;
 }

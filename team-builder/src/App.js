@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Members from './components/Members/Members';
 
 function App()
 {
@@ -14,33 +15,14 @@ function App()
 
     return (
         <div className="App">
-            <div className="container">
-                <header>
+            <header>
+                <div className="container">
                     <h1>Team Members</h1>
-                </header>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Roll</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            teamMembers.map((item, key) => {
-                                return (
-                                    <tr key={key}>
-                                        <td> {item.name} </td>
-                                        <td> {item.email} </td>
-                                        <td> {item.roll} </td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table>
-            </div>
+                </div>
+            </header>
+
+            {/* List team members */}
+            <Members teamMembers={teamMembers} />
         </div>
     );
 }
