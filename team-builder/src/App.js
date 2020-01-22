@@ -1,26 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App()
+{
+
+    //  Team members state
+    const [teamMembers, setTeamMembers] = useState([{
+        name: 'John Doe',
+        email: 'john@doe.com',
+        roll: 'intern'
+    }]);
+
+    return (
+        <div className="App">
+            <div className="container">
+                <header>
+                    <h1>Team Members</h1>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Roll</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            teamMembers.map((item, key) => {
+                                return (
+                                    <tr key={key}>
+                                        <td> {item.name} </td>
+                                        <td> {item.email} </td>
+                                        <td> {item.roll} </td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    );
 }
 
 export default App;
