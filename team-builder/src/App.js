@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Members from './components/Members/Members';
+import Form from './components/Form/Form';
 
 function App()
 {
@@ -21,8 +22,13 @@ function App()
                 </div>
             </header>
 
-            {/* List team members */}
-            <Members teamMembers={teamMembers} />
+            <div className='container'>
+                {/* List team members */}
+                <Members teamMembers={teamMembers} />
+
+                {/* Form */}
+                <Form setTeamMembers={setTeamMembers} />
+            </div>
         </div>
     );
 }

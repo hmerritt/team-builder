@@ -4,7 +4,7 @@ import './Members.css';
 function Members({ teamMembers })
 {
     return (
-        <>
+        <div className='team-members'>
             <table>
                 <thead>
                     <tr>
@@ -27,7 +27,7 @@ function Members({ teamMembers })
                     }
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
 
