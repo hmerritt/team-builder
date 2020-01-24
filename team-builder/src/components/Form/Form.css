@@ -1,0 +1,22 @@
+
+form {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0;
+}
+form label h4 {
+  margin: 0;
+}
+form input,
+form select {
+  width: 200px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 25px;
+}
